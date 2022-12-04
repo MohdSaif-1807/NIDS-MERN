@@ -1,0 +1,53 @@
+<%-include('partials/header') %>
+<!--<?<php>
+	
+</php>
+<div>
+	<form action="/csv" method="POST">
+		
+		<div class="textbox">
+		  <i class="fa-brands fa-pagelines"></i>
+		  <input type="text" id="mt" name="mytext" value="" placeholder="f3">
+		</div>
+		<button type="submit" class="btn" onclick="getval()">Predict</button>
+	</form>
+	<script>
+		function getval(){
+		var x=document.getElementById("file1").value;
+		document.getElementById("mt").value = x;
+		console.log(x);
+		}
+	</script>
+</div>-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>  
+  <script>  
+  $(document).ready(function() {  
+     $('#uploadForm').submit(function() {  
+         $("#status").empty().text("File is uploading...");  
+        $(this).ajaxSubmit({  
+            error: function(xhr) {  
+                    status('Error: ' + xhr.status);  
+    },
+            success: function(response) {  
+                    console.log(response)  
+                    $("#status").empty().text(response);  
+            }  
+    });  
+  
+    return false;  
+    });      
+});  
+  </script>  
+  </head>  
+  <div> 
+      <form id="uploadForm" enctype="multipart/form-data" action="/uploadjavatpoint" method="post"> 
+        <div>
+			<input type="file" id="f1"  name="myfile" placeholder="f2">
+		</div>
+        <br>
+       <input type="submit" value="Upload Image" name="submit"><br/><br/>  
+       <span id="status"></span>  
+      </form>  
+	</div>
+<%-include('partials/footer') %>

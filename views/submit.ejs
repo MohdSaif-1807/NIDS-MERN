@@ -1,0 +1,45 @@
+<%- include('partials/header') %>
+
+<!-- </head>
+<body>
+<div class="info" >
+  <h2 class="info-h2">This web app pick random single row from validation data at a time for prediction. There is a validation data of 8020 rows.</h2>
+</div>
+<div class="login-box">
+  <a href="/secrets" class="btn">Predict</a>
+  <h6 style="margin-top: 50px; text-align: center;">Copyright © 2022.</h6> 
+</div>  -->
+
+<div class="container-fluid">
+
+  <div class="row">
+
+<div class="card text-center" style="width: 18rem; margin: 30px; background-color: #71C9CE">
+  <div class="card-body">
+    <h5 class="card-title">Ramdom row predict</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="/secrets" class="btn btn-dark" style="background-color: #24a0ed;">Predict</a>
+  </div>
+</div>
+<div class="card text-center" style="width: 18rem; margin: 30px; background-color: #71C9CE">
+  <div class="card-body">
+    <h5 class="card-title">open CSV</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <form action="/">
+      <!--input type="file" class="btn btn-dark"  style="background-color: #24a0ed;" id="myfile" name="myfile"><br><br>-->
+      <a href="/csv" class="btn btn-dark" type="submit" style="background-color: #24a0ed;">Predict</a>
+    </form>
+  </div>
+</div>
+<div class="card text-center" style="width: 18rem; margin: 30px;background-color: #71C9CE">
+  <div class="card-body">
+    <h5 class="card-title">Enter Network Parameters</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="/paramsecrets" class="btn btn-dark" style="background-color: #24a0ed;">Predict</a>
+  </div>
+</div>
+</div>
+</div>
+
+
+<%- include('partials/footer') %>
