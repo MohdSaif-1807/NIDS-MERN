@@ -1,0 +1,20 @@
+<%-include('partials/header') %>
+
+<div>
+	<form action="/csv" method="POST">
+		<div>
+			<input type="file" id="file1" name="csv_file" placeholder="f1">
+		</div>
+		<div class="textbox">
+		  <i class="fa-brands fa-pagelines"></i>
+		  <input type="text" id="mt" name="mytext" value="" placeholder="f3">
+		</div>
+		<button type="submit" class="btn">Predict</button>
+	</form>
+	<script>
+		var x=document.getElementById("file1").value;
+		document.getElementById("mt").value = x;
+		console.log(x);
+	</script>
+</div>
+<%-include('partials/footer') %>
