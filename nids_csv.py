@@ -54,7 +54,7 @@ df_validate['multi class']=x_predict_multi
 #print(l)
 #df_validate
 #print(df_validate['dst_host_srv_count'])
-df_validate.to_csv(path)
+df_validate.to_csv(path,index=False)
 print('completed!!')
 '''df_validate.to_csv(f"f")
 df=pd.read_csv('f',index_col=0)

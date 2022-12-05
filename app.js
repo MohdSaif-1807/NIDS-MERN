@@ -6,6 +6,7 @@ const {parse, stringify} = require('flatted');
 let {PythonShell} = require('python-shell')
 const express = require("express"); 
 var multer  =   require('multer');  
+const download = require('download');
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
@@ -211,13 +212,34 @@ app.post('/uploadjavatpoint',function(req,res){  
     if (err)
     console.log(err);
     if(response){
-      final_ans=stringify(response[0]);
-      console.log(final_ans);
+      temp_final_ans=stringify(response[0]);
+      final_ans=temp_final_ans.slice(2,-2);
+
+      //l=["completed!!"];
+      //l=stringify(l);
       }
   }) 
 })
- 
 });
+l=["completed!!"];
+app.get('/index',(req,res)=>{
+  console.log("entering");
+  res.render('index');
+});
+app.get('/download-file',(req,res)=>{
+  console.log("entered");
+ res.download('./Uploaded_files/fs_test.csv');
+        });
+path='Uploaded_files/'
+path+=submitted_csv_file;
+if(l==final_ans){
+
+        
+  //    }
+      }
+      else{
+        console.log('not equal')
+      }
 /*app.get("/csv",function(req,res){
   res.render("csv");
 })*/
